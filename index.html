@@ -6,17 +6,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Borel&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div class="main">
 
-<form class="claculator" name="claculator">
+<form class="claculatorform" name="claculatorform">
     <div class="screen">
-        <input type="text" name="screen" readonly>
+        <input type="text" name="screen" readonly >
     </div>
     <div class="btn"> 
-        <input type="button" class="clearbtn" name="clear" value="clear" onclick="clear()">
+        <input type="button" class="clearbtn" name="clear" value="clear" onclick="Clear()">
     </div>
     <div class="btn">
         <input type="button"  class="numbers" name="num1" value="1" onclick="valueButton(this);">
@@ -34,7 +35,7 @@
         <input type="button"  class="numbers" name="num7" value="7" onclick="valueButton(this);">
         <input type="button"  class="numbers"name="num8" value="8" onclick="valueButton(this);">
         <input type="button"  class="numbers" name="num9" value="9" onclick="valueButton(this);">
-        <input type="button"  class="numbers" name="mul" value="x "onclick="valueButton(this);">
+        <input type="button"  class="numbers" name="mul" value="* "onclick="valueButton(this);">
     </div>
     <div class="btn">
         <input type="button"  class="numbers" name="num0" value="0" onclick="valueButton(this);">
@@ -43,7 +44,23 @@
         
     </div>
 </form>
-  
+
+
+  <script>
+function valueButton(e){
+    claculatorform.screen.value += e.value;
+}
+function Clear()
+{
+    claculatorform.screen.value =null;
+}
+function calculate(){
+    claculatorform.screen.value =eval( claculatorform.screen.value)
+}
+
+
+
+  </script>
 </div>
 </body>
 </html>
