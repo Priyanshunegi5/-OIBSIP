@@ -15,11 +15,46 @@ body{
     align-items: center;
     justify-content: center;
 }
-.main.claculatorform{
+.main .claculatorform{
     width: 350px;
     height: 450px;
     position: relative;
     border: 1px solid ;
     font-size: 25px;
-    font-weight: 500px;
+    font-weight: 500;
+}
+.main .claculatorform div{
+    width: 100%;
+    height:calc(450px/6);
+    display: flex;
+    flex: 1;
+}
+.main .claculatorform div input{
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    font-weight: 500;
+
+}
+.numbers{
+    color:#fff;
+    background-color: #0c2835;
+    border-radius: 2px solid rgb (34,109,94);
+}
+.clearbtn{
+    background-color: #ff3077;
+    color: #fff;
+    font-weight: 900;
+}
+.copywrights{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #ff3077;
+    font-size: 10px;
+    font-weight: 900;
+    color: #fff;
+    width: 100%;
+
 }
